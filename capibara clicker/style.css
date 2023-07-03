@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:url(./img/terraco-do-campo-de-arroz-paddy-com-um-rio-limpo-fluindo-no-meio-bela-paisagem-agricola-rural_288411-1633.avif)
+}
+
+.fundo{
+    width: 195vh;
+    height: 99vh;
+}
