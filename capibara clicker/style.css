@@ -8,7 +8,7 @@ body{
 }
 
 .fundo{
-    background: url("./img/lake\ style\ cart\ 1.png") no-repeat left top;
+    background: url("./img/fundo.png") no-repeat left top;
     display: flex;
     background-size: contain;
     position: fixed;
@@ -19,7 +19,7 @@ body{
 }
 
 .container_capibara{
-    width: 35%;
+    width: 34%;
     height: 100%;
     background-color: transparent;
     justify-content: center;
@@ -34,6 +34,8 @@ body{
 
 .score{
     margin-top: 2%;
+    font-size: 80px;
+    background-color: ;
 }
 
 .capibara{
@@ -49,6 +51,10 @@ body{
     width: 60%;
     height: 60%;
     cursor: grab;
+}
+
+.capibaraIMG:active{
+    -webkit-transform:scale(1.1);
 }
 
 .container_capibarinhas{
@@ -76,7 +82,7 @@ body{
 
 .container_powers{
     display: flex;
-    width: 25%;
+    width: 26%;
     height: 100%;
     background-color: green;
     flex-wrap: wrap;
