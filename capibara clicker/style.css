@@ -3,10 +3,6 @@
     padding: 0;
 }
 
-body{
-    background-color: antiquewhite;
-}
-
 .fundo{
     display: flex;
     background-size: contain;
@@ -102,7 +98,7 @@ body{
 
 .container_powers{
     display: flex;
-    width: 24.5%;
+    width: 25%;
     height: 100%;
     flex-wrap: wrap;
     background: url("./img/fundoPoderes.jpg") left top;
@@ -168,6 +164,13 @@ body{
     background-color: white;
 }
 
+#power2{
+    background: url("./img/grama.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+
 #power8{
     background: url("./img/desconto.png") no-repeat center;
     background-size: contain;
@@ -176,7 +179,7 @@ body{
 
 
 #power9{
-    background: url("./img/black.capibara.png") no-repeat center;
+    background: url("./img/black_capibara.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
