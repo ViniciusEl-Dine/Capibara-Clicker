@@ -80,37 +80,38 @@ body{
 .container_capibarinhas{
     width: 41%;
     height: 100%;
-    background-color: rgb(150, 40, 40);
-    
+    background: url("./img/fundoPoderes.jpg") left top;
 }
 
 .capibarinhas{
-    margin-top: 0%;
     display: block;
-    width: 100%;
+    width: 98%;
     height: 100%;
+    margin-left: 1%;
 }
 
 .capibarinhas_minion{
-    margin-top: 1%;
+    margin-top: 2.3%;
     justify-content: space-around;
-    background-color: black;
+    background-color: white;
     width: 100%;
     height: 10.3%;
+    border-radius: 50px;
+    filter: blur(20px);
 }
 
 .container_powers{
     display: flex;
-    width: 25%;
+    width: 24.5%;
     height: 100%;
-    background-color: green;
     flex-wrap: wrap;
+    background: url("./img/fundoPoderes.jpg") left top;
 }
 
 .powers{
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    background: url("./img/fundoPoderes.jpg") no-repeat left top;
     display: block;
     padding-bottom: 1%;
 }
@@ -130,10 +131,11 @@ body{
 }
 
 .buttonUpgrade{
-    margin-top: 1.2%;
+    margin-top: 5%;
     justify-content: space-around;
     width: 100%;
-    height: 8%;
+    height: 7%;
+    border-radius: 50px;
 }
 
 @media (max-width: 1150px)
@@ -158,4 +160,23 @@ body{
         opacity: 0;
         top: 0;
     }
+}
+
+#power1{
+    background: url("./img/doubleClick.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+#power8{
+    background: url("./img/desconto.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+
+#power9{
+    background: url("./img/black.capibara.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
 }

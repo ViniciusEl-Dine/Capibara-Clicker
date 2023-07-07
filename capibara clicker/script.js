@@ -20,4 +20,3 @@ capibara.addEventListener("click", (e) =>{
     createParticle(e.clientX,e.clientY)
 });
 
-//teste
