@@ -31,9 +31,18 @@
 }
 
 .score{
+    position: absolute
     margin-top: 2%;
     font-size: calc(1em + 2vw);
     font-weight: bold
+}
+
+.pontos{
+    position:absolute;
+    max-width: 246px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .ps{

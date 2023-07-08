@@ -20,7 +20,7 @@ capibara.addEventListener("click", (e) =>{
     createParticle(e.clientX,e.clientY)
 });
 
-//hh
+
 const power1 = document.querySelector("#power1")
 
 const powerUp1 = document.querySelector("#powerUP1");
@@ -53,7 +53,6 @@ capivara.addEventListener("click", () => {
     console.log(pontos)
 })
 
-
 powerUp1.addEventListener("click", () => {
     if(pontos>=precoUp1){
         pontos-=precoUp1;
@@ -66,8 +65,8 @@ powerUp1.addEventListener("click", () => {
             pontos+=pontosPorSegundo,
             score.innerHTML=pontos},
             1000)
-         }
-         pontosPorSegundo++;
+        }
+        pontosPorSegundo++;
 
         ps.innerHTML=`PS: ${pontosPorSegundo}`
         if(precoUp1<=60){
