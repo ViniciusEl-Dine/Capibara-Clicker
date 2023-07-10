@@ -59,6 +59,7 @@ powerUp1.addEventListener("click", () => {
         score.innerHTML=pontos
         precoUp1+=50;
 
+        powerUp1.textContent=precoUp1;
         ps.innerHTML=`PS: ${pontosPorSegundo}`
         if(pontosPorSegundo==0){
             setInterval(() => {
@@ -194,12 +195,10 @@ powerUp3.addEventListener("click", () => {
             }
         }})
 
-
     power1.addEventListener("click" ,() => {
+        power1.setAttribute('disabled', '');
         if(pontos>0){
             pontosPorSegundo*=2;
-        }
-        else{
-            console.log
+            ps.innerHTML=`PS: ${pontosPorSegundo}`
         }
     })
