@@ -49,12 +49,48 @@ var pontos = 0;
 var pontosPorSegundo=0;
 
 capivara.addEventListener("click", () => {
-    pontos+=1;
+    pontos+=10000;
     score.innerHTML=pontos;
     console.log(pontos)
+
     if (pontos>= 100){
         powerUp1.textContent=precoUp1;
         powerUP1.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 1000){
+        powerUp2.textContent=precoUp2;
+        powerUP2.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 10000){
+        powerUp3.textContent=precoUp3;
+        powerUP3.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 100000){
+        powerUp4.textContent=precoUp4;
+        powerUP4.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 1000000){
+        powerUp5.textContent=precoUp5;
+        powerUP5.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 10000000){
+        powerUp6.textContent=precoUp6;
+        powerUP6.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 100000000){
+        powerUp7.textContent=precoUp7;
+        powerUP7.setAttribute('class', 'buttonUpgradeOn');
+    }
+
+    if (pontos>= 1000000000){
+        powerUp8.textContent=precoUp8;
+        powerUP8.setAttribute('class', 'buttonUpgradeOn');
     }
 })
 
