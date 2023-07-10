@@ -22,6 +22,7 @@ capibara.addEventListener("click", (e) =>{
 
 
 const power1 = document.querySelector("#power1")
+var power8 = document.querySelector("#power8")
 
 const powerUp1 = document.querySelector("#powerUP1");
 const powerUp2 = document.querySelector("#powerUP2");
@@ -48,7 +49,7 @@ var pontos = 0;
 var pontosPorSegundo=0;
 
 capivara.addEventListener("click", () => {
-    pontos+=100;
+    pontos+=1;
     score.innerHTML=pontos;
     console.log(pontos)
 })
@@ -58,8 +59,8 @@ powerUp1.addEventListener("click", () => {
         pontos-=precoUp1;
         score.innerHTML=pontos
         precoUp1+=50;
-
         powerUp1.textContent=precoUp1;
+
         ps.innerHTML=`PS: ${pontosPorSegundo}`
         if(pontosPorSegundo==0){
             setInterval(() => {
@@ -81,8 +82,9 @@ powerUp2.addEventListener("click", () => {
     if(pontos>=precoUp2){
         pontos-=precoUp2;
         score.innerHTML=pontos
-        precoUp2+=50;
-    
+        precoUp2+=500;
+        powerUp2.textContent=precoUp2;
+
         pontosPorSegundo+=10;
         ps.innerHTML=`PS: ${pontosPorSegundo}`
 
@@ -98,8 +100,9 @@ powerUp3.addEventListener("click", () => {
     if(pontos>=precoUp3){
         pontos-=precoUp3;
         score.innerHTML=pontos
-        precoUp3+=500;
-    
+        precoUp3+=5000;
+        powerUp3.textContent=precoUp3;
+
         pontosPorSegundo+=100;
         ps.innerHTML=`PS: ${pontosPorSegundo}`
     
@@ -114,8 +117,8 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoUp4){
             pontos-=precoUp4;
             score.innerHTML=pontos
-            precoUp4+=5000;
-            //precoUp1texto.textContent=`Preço do upgrade 2: ${precoUp2}`
+            precoUp4+=50000;
+            powerUp4.textContent=precoUp4;
         
             pontosPorSegundo+=1000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
@@ -131,8 +134,8 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoUp5){
             pontos-=precoUp5;
             score.innerHTML=pontos
-            precoUp5+=50000;
-            //precoUp1texto.textContent=`Preço do upgrade 2: ${precoUp2}`
+            precoUp5+=500000;
+            powerUp5.textContent=precoUp5;
         
             pontosPorSegundo+=10000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
@@ -148,8 +151,8 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoUp6){
             pontos-=precoUp6;
             score.innerHTML=pontos
-            precoUp6+=500000;
-            //precoUp1texto.textContent=`Preço do upgrade 2: ${precoUp2}`
+            precoUp6+=5000000;
+            powerUp6.textContent=precoUp6;
         
             pontosPorSegundo+=100000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
@@ -165,8 +168,8 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoUp7){
             pontos-=precoUp7;
             score.innerHTML=pontos
-            precoUp7+=5000000;
-            //precoUp1texto.textContent=`Preço do upgrade 2: ${precoUp2}`
+            precoUp7+=50000000;
+            powerUp7.textContent=precoUp7;
         
             pontosPorSegundo+=1000000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
@@ -182,8 +185,8 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoUp8){
             pontos-=precoUp8;
             score.innerHTML=pontos
-            precoUp8+=50000000;
-            //precoUp1texto.textContent=`Preço do upgrade 2: ${precoUp2}`
+            precoUp8+=500000000;
+            powerUp8.textContent=precoUp8;
         
             pontosPorSegundo+=10000000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
@@ -196,9 +199,45 @@ powerUp3.addEventListener("click", () => {
         }})
 
     power1.addEventListener("click" ,() => {
-        power1.setAttribute('disabled', '');
         if(pontos>0){
+            power1.setAttribute('disabled', '');
             pontosPorSegundo*=2;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
+        }
+    })
+
+
+    index=0;
+
+    power8.addEventListener("click", () => {
+        if(pontos>=5000){
+            power8.setAttribute('disabled', '');
+
+            pontos-=5000;
+            score.innerHTML=pontos
+            
+            precoUp1/=2;
+            powerUp1.textContent=precoUp1;
+
+            precoUp2/=2;
+            powerUp2.textContent=precoUp2;
+
+            precoUp3/=2;
+            powerUp3.textContent=precoUp3;
+
+            precoUp4/=2;
+            powerUp4.textContent=precoUp4;
+
+            precoUp5/=2;
+            powerUp5.textContent=precoUp5;
+
+            precoUp6/=2;
+            powerUp6.textContent=precoUp6;
+
+            precoUp7/=2;
+            powerUp7.textContent=precoUp7;
+
+            precoUp8/=2;
+            powerUp8.textContent=precoUp8;
         }
     })
