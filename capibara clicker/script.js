@@ -52,6 +52,10 @@ capivara.addEventListener("click", () => {
     pontos+=1;
     score.innerHTML=pontos;
     console.log(pontos)
+    if (pontos>= 100){
+        powerUp1.textContent=precoUp1;
+        powerUP1.setAttribute('class', 'buttonUpgradeOn');
+    }
 })
 
 powerUp1.addEventListener("click", () => {
