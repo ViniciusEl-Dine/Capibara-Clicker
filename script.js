@@ -22,8 +22,13 @@ capibara.addEventListener("click", (e) =>{
 
 
 const power1 = document.querySelector("#power1")
-const power8 = document.querySelector("#power8")
 const power2 = document.querySelector("#power2")
+const power3 = document.querySelector("#power3")
+const power4 = document.querySelector("#power4")
+const power5 = document.querySelector("#power5")
+const power6 = document.querySelector("#power6")
+const power7 = document.querySelector("#power7")
+const power8 = document.querySelector("#power8")
 
 const powerUp1 = document.querySelector("#powerUP1");
 const powerUp2 = document.querySelector("#powerUP2");
@@ -138,8 +143,8 @@ powerUp2.addEventListener("click", () => {
     }})
 
 
-powerUp3.addEventListener("click", () => {
-    if(pontos>=precoUp3){
+    powerUp3.addEventListener("click", () => {
+        if(pontos>=precoUp3){
         pontos-=precoUp3;
         score.innerHTML=pontos
         precoUp3+=5000;
@@ -243,6 +248,7 @@ powerUp3.addEventListener("click", () => {
     power1.addEventListener("click" ,() => {
         if(pontos>0){
             power1.setAttribute('disabled', '');
+            power1.textContent=('Comprado');
             pontosPorSegundo*=2;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
         }
@@ -253,13 +259,13 @@ powerUp3.addEventListener("click", () => {
         if(pontos>=precoPower2 && pontosAoClicar<10){
             pontos-=precoPower2;
             precoPower2+=1
-
             score.innerHTML=pontos
             pontosAoClicar++
         }
+
         if(pontosAoClicar>=10){
             power2.setAttribute('disabled', '');
-            power2.textContent=('Comprado')
+            power2.textContent=('Comprado');
         }
     })
 
@@ -293,5 +299,8 @@ powerUp3.addEventListener("click", () => {
 
             precoUp8/=2;
             powerUp8.textContent=precoUp8;
+
+            power8.setAttribute('disabled', '');
+            power8.textContent=('Comprado')
         }
     })
