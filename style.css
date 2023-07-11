@@ -165,14 +165,14 @@
     }
 }
 
-@media (max-width: 900px)
+@media (max-width: 740px)
 {
     .table_score{
         padding-left: 5%;
     }
 
     .pontos{
-        max-width: 15%;
+        max-width: 80px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow:ellipsis ;
