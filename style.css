@@ -50,7 +50,7 @@
     
 .capibara{
     display: flex;
-    margin-top: 25%;
+    margin-top: 50%;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -162,6 +162,20 @@
 {
     .capibara{
         margin-top: 50%
+    }
+}
+
+@media (max-width: 900px)
+{
+    .table_score{
+        padding-left: 5%;
+    }
+
+    .pontos{
+        max-width: 15%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis ;
     }
 }
     
