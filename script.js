@@ -22,7 +22,8 @@ capibara.addEventListener("click", (e) =>{
 
 
 const power1 = document.querySelector("#power1")
-var power8 = document.querySelector("#power8")
+const power8 = document.querySelector("#power8")
+const power2 = document.querySelector("#power2")
 
 const powerUp1 = document.querySelector("#powerUP1");
 const powerUp2 = document.querySelector("#powerUP2");
@@ -48,8 +49,9 @@ const ps = document.querySelector(".ps")
 var pontos = 0;
 var pontosPorSegundo=0;
 
+var pontosAoClicar = 1;
 capivara.addEventListener("click", () => {
-    pontos+=10000;
+    pontos+=pontosAoClicar;
     score.innerHTML=pontos;
     console.log(pontos)
 
@@ -246,8 +248,16 @@ powerUp3.addEventListener("click", () => {
         }
     })
 
+    var precoPower2 = 5000;
+    power2.addEventListener("click",() => {
+        if(pontos>=precoPower2 && pontosAoClicar<10){
+            pontos-=precoPower2;
+            precoPower2+=5000
 
-    index=0;
+            score.innerHTML=pontos
+            pontosAoClicar++
+        }
+    })
 
     power8.addEventListener("click", () => {
         if(pontos>=5000){
