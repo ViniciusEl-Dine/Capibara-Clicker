@@ -248,14 +248,18 @@ powerUp3.addEventListener("click", () => {
         }
     })
 
-    var precoPower2 = 5000;
+    var precoPower2 = 1;
     power2.addEventListener("click",() => {
         if(pontos>=precoPower2 && pontosAoClicar<10){
             pontos-=precoPower2;
-            precoPower2+=5000
+            precoPower2+=1
 
             score.innerHTML=pontos
             pontosAoClicar++
+        }
+        if(pontosAoClicar>=10){
+            power2.setAttribute('disabled', '');
+            power2.textContent=('Comprado')
         }
     })
 

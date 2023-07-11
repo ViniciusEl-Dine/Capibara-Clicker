@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-    
+
 .fundo{
     display: flex;
     background-size: contain;
@@ -13,7 +13,7 @@
     width: 100%;
     height: 100vh;
 }
-    
+
 .container_capibara{
     background: url("./img/fundo.png") no-repeat left top;
     width: 34%;
@@ -23,19 +23,19 @@
     align-items: center;
     flex-wrap: wrap;
 }
-    
+
 .table_score{
     display: block;
     width: 100%;
     height: 15%;
     padding-left: 25%;
 }
-    
+
 .score{
     font-size: calc(1em + 2vw);
     font-weight: bold
 }
-    
+
 .pontos{
     position:absolute;
     max-width: 246px;
@@ -43,11 +43,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-    
+
 .ps{
     font-size: calc(1em + 1vh);
 }
-    
+
 .capibara{
     display: flex;
     margin-top: 50%;
@@ -55,23 +55,23 @@
     align-items: center;
     justify-content: center;
 }
-    
+
 .capibaraIMG{
     display: flex;
     width: 60%;
     height: 60%;
     cursor: grab;
 }
-    
+
 .capibaraIMG:active{
     -webkit-transform:scale(1.1);
     transform: scale(1.1);
 }
-    
+
 .capibaraIMG::selection{
     opacity: 0;
 }
-    
+
 .capybara-particle{
     width: 30px;
     position: absolute;
@@ -80,20 +80,20 @@
     pointer-events: none;
     animation: capibara-up 3s linear forwards;
 }
-    
+
 .container_capibarinhas{
     width: 41%;
     height: 100%;
     background: url("./img/fundoPoderes.jpg") left top;
 }
-    
+
 .capibarinhas{
     display: block;
     width: 98%;
     height: 100%;
     margin-left: 1%;
 }
-    
+
 .capibarinhas_minion{
     margin-top: 2.3%;
     justify-content: space-around;
@@ -103,7 +103,7 @@
     border-radius: 50px;
     filter: blur(20px);
 }
-    
+
 .container_powers{
     display: flex;
     width: 25%;
@@ -111,7 +111,7 @@
     flex-wrap: wrap;
     background: url("./img/fundoPoderes.jpg") left top;
 }
-    
+
 .powers{
     width: 100%;
     height: 20%;
@@ -119,21 +119,21 @@
     display: block;
     padding-bottom: 1%;
 }
-    
+
 .buttonP{
     margin-top: 2%;
     margin-left: 6%;
     width: 25%;
     height: 25%;
 }
-    
+
 .upgrade_powers{
     margin-top: 0%;
     display: block;
     width: 100%;
     height: 100%;
 }
-    
+
 .buttonUpgrade{
     margin-top: 5%;
     justify-content: space-around;
@@ -142,22 +142,25 @@
     border-radius: 50px;
     filter: blur(20px);
 }
-    
+
 .buttonUpgradeOn{
     margin-top: 5%;
     justify-content: space-around;
+    font-size: calc(1em + 1vw);
+    letter-spacing: 2px;
     width: 100%;
     height: 7%;
     border-radius: 50px;
+    background: linear-gradient(red,yellow, green);
 }
-    
+
 @media (max-width: 1150px)
 {
     .capibara{
         margin-top: 40%
     }
 }
-    
+
 @media (max-width: 1000px)
 {
     .capibara{
@@ -178,7 +181,7 @@
         text-overflow:ellipsis ;
     }
 }
-    
+
 @keyframes capibara-up {
     from {
         opacity: 1;
@@ -194,38 +197,37 @@
     background-size: contain;
     background-color: white;
 }
-    
+
 #power1:disabled{
-    background: radial-gradient(yellow, green 95%);
+    background: linear-gradient(90deg, #fbff00, #3cff00);
 }
-    
+
 #power2{
     background: url("./img/grama.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
-    
+
 #power2:disabled{
-    background: radial-gradient(yellow, green 95%);
+    background: linear-gradient(90deg, #fbff00, #3cff00);
 }
-    
+
 #power8{
     background: url("./img/desconto.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
-    
+
 #power8:disabled{
     background: radial-gradient(yellow, green 95%);
 }
-    
+
 #power9{
     background: url("./img/black_capibara.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
-    
+
 #power9:disabled{
     background: radial-gradient(yellow, green 95%);
 }
-    
