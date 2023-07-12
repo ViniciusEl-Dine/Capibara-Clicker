@@ -4,7 +4,7 @@ const createParticle = (x,y) =>{
     const capibaraCLicks = document.querySelector(".capibara");
 
     const particle = document.createElement("img");
-    particle.setAttribute("src","./img/s2.png");
+    particle.setAttribute("src","../assets/images/IconHeart.png");
     particle.setAttribute("class","capybara-particle");
     particle.style.left = x + "px";
     particle.style.top = y + "px";
