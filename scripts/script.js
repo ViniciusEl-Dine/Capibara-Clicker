@@ -38,7 +38,14 @@ const powerUp6 = document.querySelector("#powerUP6");
 const powerUp7 = document.querySelector("#powerUP7");
 const powerUp8 = document.querySelector("#powerUP8");
 
-const divCap1 = document.querySelector("#minion2");
+const divCap1 = document.querySelector("#minion1");
+const divCap2 = document.querySelector("#minion2");
+const divCap3 = document.querySelector("#minion3");
+const divCap4 = document.querySelector("#minion4");
+const divCap5 = document.querySelector("#minion5");
+const divCap6 = document.querySelector("#minion6");
+const divCap7 = document.querySelector("#minion7");
+const divCap8 = document.querySelector("#minion8");
 
 var precoUp1 = 100;
 var precoUp2 = 1000;
@@ -120,7 +127,7 @@ powerUp1.addEventListener("click", () => {
         ps.innerHTML = `PS: ${pontosPorSegundo}`
         if(precoUp1 <= 600){
             const foto1 = document.createElement("foto1");
-            foto1.innerHTML=`<img src="../assets/images/IconHeart.png" width="50px" heigth="50px"/>`
+            foto1.innerHTML=`<img src="../assets/images/IconHeart.png" class="minions" />`
             divCap1.appendChild(foto1);
         }
     }})
@@ -137,8 +144,8 @@ powerUp2.addEventListener("click", () => {
 
         if(precoUp1 <= 6000){
             const foto1 = document.createElement("fotoUpgrade2");
-            foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
-            document.body.appendChild(foto1);
+            foto1.innerHTML = `<img src="../assets/images/IconHeart.png" class="minions"/>`
+            divCap2.appendChild(foto1);
         }
     }})
 
@@ -155,8 +162,8 @@ powerUp2.addEventListener("click", () => {
     
         if(precoUp1 <= 60000){
             const foto1 = document.createElement("fotoUpgrade2");
-            foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
-            document.body.appendChild(foto1);
+            foto1.innerHTML = `<img src="../assets/images/IconHeart.png" class="minions"/>`
+            divCap3.appendChild(foto1);
         }
     }})
 
