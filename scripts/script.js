@@ -142,7 +142,7 @@ powerUp2.addEventListener("click", () => {
         pontosPorSegundo += 10;
         ps.innerHTML = `PS: ${pontosPorSegundo}`
 
-        if(precoUp1 <= 6000){
+        if(precoUp2 <= 6000){
             const foto1 = document.createElement("fotoUpgrade2");
             foto1.innerHTML = `<img src="../assets/images/IconHeart.png" class="minions"/>`
             divCap2.appendChild(foto1);
@@ -160,7 +160,7 @@ powerUp2.addEventListener("click", () => {
         pontosPorSegundo += 100;
         ps.innerHTML = `PS: ${pontosPorSegundo}`
     
-        if(precoUp1 <= 60000){
+        if(precoUp3 <= 60000){
             const foto1 = document.createElement("fotoUpgrade2");
             foto1.innerHTML = `<img src="../assets/images/IconHeart.png" class="minions"/>`
             divCap3.appendChild(foto1);
