@@ -38,6 +38,8 @@ const powerUp6 = document.querySelector("#powerUP6");
 const powerUp7 = document.querySelector("#powerUP7");
 const powerUp8 = document.querySelector("#powerUP8");
 
+const divCap1 = document.querySelector("#minion2");
+
 var precoUp1 = 100;
 var precoUp2 = 1000;
 var precoUp3 = 10000;
@@ -116,10 +118,10 @@ powerUp1.addEventListener("click", () => {
         pontosPorSegundo++;
 
         ps.innerHTML = `PS: ${pontosPorSegundo}`
-        if(precoUp1 <= 60){
-            const foto1 = document.createElement("fotoUpgrade2");
-            foto1.innerHTML=`<img src="img/capi2.png" width="50px" heigth="50px"/>`
-            document.body.appendChild(foto1);
+        if(precoUp1 <= 600){
+            const foto1 = document.createElement("foto1");
+            foto1.innerHTML=`<img src="../assets/images/IconHeart.png" width="50px" heigth="50px"/>`
+            divCap1.appendChild(foto1);
         }
     }})
 
@@ -133,7 +135,7 @@ powerUp2.addEventListener("click", () => {
         pontosPorSegundo += 10;
         ps.innerHTML = `PS: ${pontosPorSegundo}`
 
-        if(precoUp1 <= 600){
+        if(precoUp1 <= 6000){
             const foto1 = document.createElement("fotoUpgrade2");
             foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
             document.body.appendChild(foto1);
@@ -151,7 +153,7 @@ powerUp2.addEventListener("click", () => {
         pontosPorSegundo += 100;
         ps.innerHTML = `PS: ${pontosPorSegundo}`
     
-        if(precoUp1 <= 6000){
+        if(precoUp1 <= 60000){
             const foto1 = document.createElement("fotoUpgrade2");
             foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
             document.body.appendChild(foto1);
@@ -168,7 +170,7 @@ powerUp2.addEventListener("click", () => {
             pontosPorSegundo += 1000;
             ps.innerHTML = `PS: ${pontosPorSegundo}`
         
-            if(precoUp1 <= 60000){
+            if(precoUp1 <= 600000){
                 const foto1 = document.createElement("fotoUpgrade2");
                 foto1.innerHTML=`<img src="img/capi2.png" width="50px" heigth="50px"/>`
                 document.body.appendChild(foto1);
@@ -185,7 +187,7 @@ powerUp2.addEventListener("click", () => {
             pontosPorSegundo += 10000;
             ps.innerHTML = `PS: ${pontosPorSegundo}`
 
-            if(precoUp1 <= 600000){
+            if(precoUp1 <= 6000000){
                 const foto1 = document.createElement("fotoUpgrade2");
                 foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
                 document.body.appendChild(foto1);
@@ -202,7 +204,7 @@ powerUp2.addEventListener("click", () => {
             pontosPorSegundo += 100000;
             ps.innerHTML=`PS: ${pontosPorSegundo}`
         
-            if(precoUp1 <= 6000000){
+            if(precoUp1 <= 60000000){
                 const foto1 = document.createElement("fotoUpgrade2");
                 foto1.innerHTML=`<img src="img/capi2.png" width="50px" heigth="50px"/>`
                 document.body.appendChild(foto1);
@@ -219,7 +221,7 @@ powerUp2.addEventListener("click", () => {
             pontosPorSegundo += 1000000;
             ps.innerHTML = `PS: ${pontosPorSegundo}`
         
-            if(precoUp1<=60000000){
+            if(precoUp1<=600000000){
                 const foto1 = document.createElement("fotoUpgrade2");
                 foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
                 document.body.appendChild(foto1);
@@ -236,7 +238,7 @@ powerUp2.addEventListener("click", () => {
             pontosPorSegundo += 10000000;
             ps.innerHTML = `PS: ${pontosPorSegundo}`
         
-            if(precoUp1 <= 600000000){
+            if(precoUp1 <= 6000000000){
                 const foto1 = document.createElement("fotoUpgrade2");
                 foto1.innerHTML = `<img src="img/capi2.png" width="50px" heigth="50px"/>`
                 document.body.appendChild(foto1);
