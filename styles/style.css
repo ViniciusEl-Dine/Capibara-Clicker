@@ -236,41 +236,41 @@
 }
 
 #minion1{
-    background: url("./img/BiomeBannerForest.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
     background-size:contain;
 }
 
 #minion2{
-    background: url("./img/BiomeBannerSnow.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
     background-size:contain;
 }
 
 #minion3{
-    background: url("./img/BiomeBannerDesert.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
     background-size:contain;
 }
 
 #minion4{
-    background: url("./img/BiomeBannerJungle.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerJungle.png") no-repeat center;
     background-size:contain;
 }
 
 #minion5{
-    background: url("./img/BiomeBannerOasis.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerOasis.png") no-repeat center;
     background-size:contain;
 }
 
 #minion6{
-    background: url("./img/BiomeBannerGraveyard.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerGraveyard.png") no-repeat center;
     background-size:contain;
 }
 
 #minion7{
-    background: url("./img/BiomeBannerHallow.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerHallow.png") no-repeat center;
     background-size:contain;
 }
 
 #minion8{
-    background: url("./img/BiomeBannerCorruption.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
     background-size:contain;
 }
