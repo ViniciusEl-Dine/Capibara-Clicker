@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fundo{
+    display: flex;
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.container_capibara{
+    background: url("../assets/images/BackgroundMain.png") no-repeat left top;
+    width: 34%;
+    height: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.table_score{
+    display: block;
+    width: 100%;
+    height: 15%;
+    padding-left: 25%;
+}
+
+.score{
+    font-size: calc(1em + 2vw);
+    font-weight: bold
+}
+
+.pontos{
+    position:absolute;
+    max-width: 246px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ps{
+    font-size: calc(1em + 1vh);
+}
+
+.capibara{
+    display: flex;
+    margin-top: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.capibaraIMG{
+    display: flex;
+    width: 60%;
+    height: 60%;
+    cursor: grab;
+}
+
+.capibaraIMG:active{
+    -webkit-transform:scale(1.1);
+    transform: scale(1.1);
+}
+
+.capibaraIMG::selection{
+    opacity: 0;
+}
+
+.capybara-particle{
+    width: 30px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    pointer-events: none;
+    animation: capibara-up 3s linear forwards;
+}
+
+.container_capibarinhas{
+    width: 41%;
+    height: 100%;
+    background: url("../assets/images/BackgroundPowers.jpg") left top;
+}
+
+.capibarinhas{
+    display: block;
+    width: 98%;
+    height: 100%;
+    margin-left: 1%;
+}
+
+.capibarinhas_minion{
+    margin-top: 2.3%;
+    justify-content: space-around;
+    background-color: white;
+    width: 100%;
+    height: 10.3%;
+}
+
+.container_powers{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    flex-wrap: wrap;
+    background: url("../assets/images/BackgroundPowers.jpg") left top;
+}
+
+.powers{
+    width: 100%;
+    height: 20%;
+    background: url("../assets/images/BackgroundPowers.jpg") no-repeat left top;
+    display: block;
+    padding-bottom: 1%;
+}
+
+.buttonP{
+    margin-top: 2%;
+    margin-left: 6%;
+    width: 25%;
+    height: 25%;
+}
+
+.upgrade_powers{
+    margin-top: 0%;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.buttonUpgrade{
+    margin-top: 5%;
+    justify-content: space-around;
+    width: 100%;
+    height: 7%;
+    border-radius: 50px;
+    filter: blur(20px);
+}
+
+.buttonUpgradeOn{
+    margin-top: 5%;
+    justify-content: space-around;
+    font-size: calc(1em + 1vw);
+    letter-spacing: 2px;
+    width: 100%;
+    height: 7%;
+    border-radius: 50px;
+    background: linear-gradient(red,yellow, green);
+}
+
+@media (max-width: 1150px)
+{
+    .capibara{
+        margin-top: 40%
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .capibara{
+        margin-top: 50%
+    }
+}
+
+@media (max-width: 900px)
+{
+    .table_score{
+        padding-left: 5%;
+    }
+
+    .pontos{
+        max-width: 15%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis ;
+    }
+}
+
+@keyframes capibara-up {
+    from {
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        top: 0;
+    }
+}
+
+.buttonP:disabled{
+    font-size: calc(1em + 0.1vw);
+    font-weight: bold;
+    color: white;
+}
+
+#power1{
+    background: url("../assets/images/IconDoubleClick.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+#power1:disabled{
+    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+}
+
+#power2{
+    background: url("../assets/images/IconGrass.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+#power2:disabled{
+    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+}
+
+#power8{
+    background: url("../assets/images/IconDiscount.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+#power8:disabled{
+    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+}
+
+#power9{
+    background: url("../assets/images/IconBlackCapybara.png") no-repeat center;
+    background-size: contain;
+    background-color: white;
+}
+
+#power9:disabled{
+    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+}
+
+#minion1{
+    background: url("./img/BiomeBannerForest.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion2{
+    background: url("./img/BiomeBannerSnow.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion3{
+    background: url("./img/BiomeBannerDesert.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion4{
+    background: url("./img/BiomeBannerJungle.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion5{
+    background: url("./img/BiomeBannerOasis.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion6{
+    background: url("./img/BiomeBannerGraveyard.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion7{
+    background: url("./img/BiomeBannerHallow.png") no-repeat center;
+    background-size:contain;
+}
+
+#minion8{
+    background: url("./img/BiomeBannerCorruption.png") no-repeat center;
+    background-size:contain;
+}

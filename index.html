@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Capibara Clicker</title>
 </head>
 <body>
-    <div class="fundo">
-        <div class="container_capibara">
+    <div class="fundo" draggable="false">
+        <div class="container_capibara" draggable="false">
             <div class="table_score">
-                <h1 class="score">pontos:</h1>
+                <span class="score">Pontos:</span>
+                <span class="score pontos">0</span>
+                <h1 class="ps">PS:</h1>
             </div>
-            <div class="capibara" id="clicker">
-                <img class="capibaraIMG" src="./img/capybara-wearing-a-nice-hat-by-Vexels (1).png" alt="">
+            <div class="capibara" id="clicker" draggable="false">
+                <img draggable="false" class="capibaraIMG" id="capibaraIMG" src="./assets/images/IconCapybaraClicker.png" draggable="false">
             </div>
         </div>
 
@@ -27,21 +29,20 @@
                 <div class="capibarinhas_minion" id="minion6"></div>
                 <div class="capibarinhas_minion" id="minion7"></div>
                 <div class="capibarinhas_minion" id="minion8"></div>
-                <div class="capibarinhas_minion" id="minion9"></div>
             </div>
         </div>
 
         <div class="container_powers">
             <div class="powers" id="powers">
-                <button class="buttonP" id="power1"></button>
-                <button class="buttonP" id="power2"></button>
-                <button class="buttonP" id="power3"></button>
-                <button class="buttonP" id="power4"></button>
-                <button class="buttonP" id="power5"></button>
-                <button class="buttonP" id="power6"></button>
-                <button class="buttonP" id="power7"></button>
-                <button class="buttonP" id="power8"></button>
-                <button class="buttonP" id="power9"></button>
+                <button class="buttonP" id="power1">.</button>
+                <button class="buttonP" id="power2">.</button>
+                <button class="buttonP" id="power3">.</button>
+                <button class="buttonP" id="power4">.</button>
+                <button class="buttonP" id="power5">.</button>
+                <button class="buttonP" id="power6">.</button>
+                <button class="buttonP" id="power7">.</button>
+                <button class="buttonP" id="power8">.</button>
+                <button class="buttonP" id="power9">.</button>
             </div>
             <div class="upgrade_powers">
                 <button class="buttonUpgrade" id="powerUP1"></button>
@@ -52,10 +53,9 @@
                 <button class="buttonUpgrade" id="powerUP6"></button>
                 <button class="buttonUpgrade" id="powerUP7"></button>
                 <button class="buttonUpgrade" id="powerUP8"></button>
-                <button class="buttonUpgrade" id="powerUP9"></button>
             </div>
         </div>
     </div>
 </body>
-<script type="text/javascript" src="./script.js"></script>
+<script type="text/javascript" src="./scripts/script.js"></script>
 </html>
