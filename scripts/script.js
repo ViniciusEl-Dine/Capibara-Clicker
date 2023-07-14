@@ -1,13 +1,14 @@
-const capivara = document.querySelector("#capibaraIMG");
 const capybara = document.querySelector(".capibaraIMG");
 const btnUpgrades = document.querySelectorAll('.btnUpgrade');
 const btnPowers = document.querySelectorAll('.btnPower');
 var priceUpgrades = [100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000];
+const limitaFotos = [0,0,0,0,0,0,0,0];
+const divs = document.querySelectorAll('.capibarinhas_minion');
 const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
 var pontos = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1;
+var pontosAoClicar = 1000000000;
 
 /*
  * --> Cria particulas de clique
@@ -32,7 +33,7 @@ capybara.addEventListener("click", (e) =>{
 /*
 * --> Clicker de capivara
 */
-capivara.onclick = function() {
+capybara.onclick = function() {
     pontos += pontosAoClicar;
     score.innerHTML = pontos;
     mostrarBotoesMelhoria();
@@ -42,85 +43,83 @@ capivara.onclick = function() {
  * ---> Botões de melhoria
 */
 btnUpgrades[0].onclick = function() {
-    especialManipularPontos(0, pontos, priceUpgrades[0], 50, null);
-    especialAtualizarHTML(pontosPorSegundo);
+    manipularPontos(0, priceUpgrades[0], 5, 1);
+    atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[1].onclick = function() {
-    manipularPontos(1, pontos, priceUpgrades[1], 500, 10);
+    manipularPontos(1,  priceUpgrades[1], 50, 10);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[2].onclick = function() {
-    manipularPontos(2, pontos, priceUpgrades[2], 5000, 100);
+    manipularPontos(2,  priceUpgrades[2], 500, 100);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[3].onclick = function() {
-    manipularPontos(3, pontos, priceUpgrades[3], 500000, 1000);
+    manipularPontos(3,  priceUpgrades[3], 5000, 1000);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[4].onclick = function() {
-    manipularPontos(4, pontos, priceUpgrades[4], 5000000, 10000);
+    manipularPontos(4,  priceUpgrades[4], 50000, 10000);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[5].onclick = function() {
-    manipularPontos(5, pontos, priceUpgrades[5], 50000000, 100000);
+    manipularPontos(5,  priceUpgrades[5], 500000, 100000);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[6].onclick = function() {
-    manipularPontos(6, pontos, priceUpgrades[6], 500000000, 1000000);
+    manipularPontos(6,  priceUpgrades[6], 5000000, 1000000);
     atualizarHTML(pontosPorSegundo);
 }
 
 btnUpgrades[7].onclick = function() {
-    manipularPontos(7, pontos, priceUpgrades[7], 5000000000, 10000000);
+    manipularPontos(7, priceUpgrades[7], 50000000, 10000000);
     atualizarHTML(pontosPorSegundo);
 }
 
-function especialManipularPontos(index, pontos, precoUpgrade, valor) {
-    if(pontos >= precoUpgrade) {
-        if(pontosPorSegundo == 0 && precoUpgrade == 100) {
-            setInterval(() => {
-            this.pontos += pontosPorSegundo,
-            score.innerHTML = this.pontos}, 1000)
-        }
-        pontosPorSegundo++;
-        this.pontos -= precoUpgrade;
-        score.innerHTML = this.pontos;
-        precoUpgrade += valor;
-        priceUpgrades[index] = precoUpgrade;
-        btnUpgrades[index].textContent = precoUpgrade; //Atualiza o texto com base no ponteiro e no preço da melhoria
-    }
-}
-
-function especialAtualizarHTML(pps) { //PPS significa Pontos Por Segundo
-    ps.innerHTML = `Pontos por segundo: ${pps}`
-}
-
 //Manipula os pontos de todos os outros botões de melhoria
-function manipularPontos(index, pontos, precoUpgrade, valorSoma, valorSomaPontos) {
-    if(pontos >= precoUpgrade) {
+function manipularPontos(index, precoUpgrade, valorSoma, valorSomaPontos, ) {
+    
         if(this.pontos >= precoUpgrade){
+
+            if(pontosPorSegundo == 0 && precoUpgrade == 100) {
+                setInterval(() => {
+                this.pontos += pontosPorSegundo,
+                score.innerHTML = this.pontos}, 1000)
+            }
+
             this.pontos -= precoUpgrade;
             score.innerHTML = this.pontos;
             precoUpgrade += valorSoma;
             priceUpgrades[index] = precoUpgrade;
             btnUpgrades[index].textContent = precoUpgrade; //Atualiza o texto com base no ponteiro e no preço da melhoria
             pontosPorSegundo += valorSomaPontos;
+        
+            if (limitaFotos[index]<10){
+                limitaFotos[index]++;
+            }
+
+            adicionaImagem( divs[index], limitaFotos[index])
+
         }
-        /*if(precoUpgrade <= 60) {
-            const foto1 = document.createElement("fotoUpgrade2");
-            foto1.innerHTML=`<img src="img/capi2.png" width="50px" heigth="50px"/>`
-            document.body.appendChild(foto1);
-        }*/
+}
+
+function adicionaImagem(div, limitaFotos){
+    if(limitaFotos<10) {
+        const foto = document.createElement("foto");
+        foto.innerHTML=`<img src="../assets/images/minion01.png"width="50px" heigth="50px" class="minions"/>`
+        div.appendChild(foto);
+        limitaFotos++;
+        console.log(limitaFotos)
     }
 }
 
-function atualizarHTML(pps) {
+function atualizarHTML() {
     ps.innerHTML = `Pontos por segundo: ${pontosPorSegundo}`;
 }
 
@@ -160,7 +159,7 @@ function mostrarBotoesMelhoria() {
 }
 
 btnPowers[0].addEventListener("click" ,() => {
-    if(pontos > 0){
+    if(pontos >= 1){
         btnPowers[0].setAttribute('disabled', '');
         btnPowers[0].textContent=('Comprado');
         pontosPorSegundo *= 2;
@@ -189,30 +188,20 @@ btnPowers[7].addEventListener("click", () => {
 
         pontos -= 5000;
         score.innerHTML = pontos
-        
-        priceUpgrades[0] /= 2;
-        btnPowers[0].textContent = priceUpgrades[0];
 
-        priceUpgrades[1] /= 2;
-        btnPowers[1].textContent = priceUpgrades[1];
+        function desconto(i){
+            priceUpgrades[i] /=2;
+            btnUpgrades[i].textContent = priceUpgrades[i];
+        }
 
-        priceUpgrades[2] /= 2;
-        btnPowers[0].textContent = priceUpgrades[2];
-
-        priceUpgrades[3] /= 2;
-        btnPowers[1].textContent = priceUpgrades[3];
-
-        priceUpgrades[4] /= 2;
-        btnPowers[0].textContent = priceUpgrades[4];
-
-        priceUpgrades[5] /= 2;
-        btnPowers[1].textContent = priceUpgrades[5];
-
-        priceUpgrades[6] /= 2;
-        btnPowers[0].textContent = priceUpgrades[6];
-
-        priceUpgrades[7] /= 2;
-        btnPowers[1].textContent = priceUpgrades[7];
+        desconto(0);
+        desconto(1);
+        desconto(2);
+        desconto(3);
+        desconto(4);
+        desconto(5);
+        desconto(6);
+        desconto(7);
 
         btnPowers[7].setAttribute('disabled', '');
         btnPowers[7].textContent=('Comprado')
