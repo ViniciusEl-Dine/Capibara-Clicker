@@ -23,24 +23,24 @@ capybara.addEventListener("click", (e) =>{
 
 const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
-var pontos = 94;
+var pontos = 0;
 var pontosPorSegundo = 0;
 var pontosAoClicar = 1;
 
 capivara.addEventListener("click", () => {
     for(let i = 0; i < btnUpgrades.length; i++) {
         btnUpgrades[i].addEventListener("click", () => {
-            if(priceUpgrades[i] == 100) {
+            if(priceUpgrades[i] >= 100) {
                 if(pontos >= priceUpgrades[i]) {
                     especialManipularPontos(i, pontos, priceUpgrades[i], 50);
                     especialAtualizarHTML(pontosPorSegundo);
                     pontosPorSegundo++;
                     especialAtualizarHTML(pontosPorSegundo);
-                if(priceUpgrades[i] <= 60) {
+                /*if(priceUpgrades[i] <= 60) {
                     const foto1 = document.createElement("fotoUpgrade2");
                     foto1.innerHTML=`<img src="img/capi2.png" width="50px" heigth="50px"/>`
                      document.body.appendChild(foto1);
-                    }
+                    }*/
                 }
             } else {
                 if(priceUpgrades[i] == 1000) {manipularPontos(i, pontos, priceUpgrades[i], 500, 10); atualizarHTML(this.pontosPorSegundo);}
@@ -64,6 +64,7 @@ capivara.addEventListener("click", () => {
         this.pontos -= precoUpgrade;
         score.innerHTML = this.pontos;
         precoUpgrade += valor;
+        priceUpgrades[index] = precoUpgrade;
         btnUpgrades[index].textContent = precoUpgrade; //Atualiza o texto com base no ponteiro e no preço da melhoria
     }
 
