@@ -117,7 +117,7 @@
     padding-bottom: 1%;
 }
 
-.buttonP{
+.btnPower{
     margin-top: 2%;
     margin-left: 6%;
     width: 25%;
@@ -131,7 +131,7 @@
     height: 100%;
 }
 
-.buttonUpgrade{
+.btnUpgrade{
     margin-top: 5%;
     justify-content: space-around;
     width: 100%;
@@ -189,7 +189,7 @@
     }
 }
 
-.buttonP:disabled{
+.btnPower:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
     color: white;
