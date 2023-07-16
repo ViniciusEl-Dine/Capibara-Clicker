@@ -8,7 +8,7 @@ const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
 var pontos = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1000000000;
+var pontosAoClicar = 1;
 
 /*
  * --> Cria particulas de clique
