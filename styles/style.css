@@ -73,7 +73,7 @@
 }
 
 .capybara-particle{
-    width: 30px;
+    width: calc(1rem + 4vh);
     position: absolute;
     top: -30px;
     left: -30px;
@@ -248,22 +248,22 @@ foto{
 }
 
 #minion1{
-    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerSpace.png") no-repeat center;
     background-size:cover;
 }
 
 #minion2{
-    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
     background-size:cover;
 }
 
 #minion3{
-    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
     background-size:cover;
 }
 
 #minion4{
-    background: url("../assets/images/BiomeBannerJungle.png") no-repeat center;
+    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
     background-size:cover;
 }
 
