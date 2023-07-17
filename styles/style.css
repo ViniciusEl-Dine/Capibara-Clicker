@@ -38,7 +38,7 @@
 
 .pontos{
     position:absolute;
-    max-width: 246px;
+    max-width: 15%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
