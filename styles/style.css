@@ -54,6 +54,19 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    animation: 3s ease-in-out infinite levitate;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translatey(-100px);
+    }
 }
 
 .capibaraIMG{
@@ -197,7 +210,7 @@ foto{
     }
     to{
         opacity: 0;
-        top: 0;
+
     }
 }
 
