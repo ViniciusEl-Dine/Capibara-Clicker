@@ -8,7 +8,7 @@ const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
 var pontos = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1;
+var pontosAoClicar = 1000000000;
 
 /*
  * --> Cria particulas de clique
@@ -19,7 +19,7 @@ const createParticle = (x,y) =>{
     particle.setAttribute("src","../assets/images/IconHeart.png");
     particle.setAttribute("class","capybara-particle");
     particle.style.left = x + "px";
-    particle.style.top = y + "px";
+    particle.style.top = (y/2) + "px";
     capibaraCLicks.appendChild(particle);
     setTimeout(() => {
         capibaraCLicks.removeChild(particle);
@@ -112,7 +112,7 @@ function manipularPontos(index, precoUpgrade, valorSoma, valorSomaPontos, ) {
 function adicionaImagem(div, limitaFotos){
     if(limitaFotos<10) {
         const foto = document.createElement("foto");
-        foto.innerHTML=`<img src="../assets/images/minion01.png"width="50px" heigth="50px" class="minions"/>`
+        foto.innerHTML=`<img src="../assets/images/minion01.png" class="minions"/>`
         div.appendChild(foto);
         limitaFotos++;
         console.log(limitaFotos)

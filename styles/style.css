@@ -5,7 +5,6 @@
 
 .fundo{
     display: flex;
-    background-size: contain;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +13,7 @@
 }
 
 .container_capibara{
-    background: url("../assets/images/BackgroundMain.png") no-repeat left top;
+    background: url("../assets/images/planoFundo.png") no-repeat left top;
     width: 34%;
     height: 100%;
     background-color: transparent;
@@ -28,17 +27,18 @@
     display: block;
     width: 100%;
     height: 15%;
-    padding-left: 25%;
+    padding-left: 10%;
+    color: white;
+    font-family: "Audiowide", sans-serif;
 }
 
 .score{
     font-size: calc(1em + 2vw);
-    font-weight: bold
 }
 
 .pontos{
     position:absolute;
-    max-width: 246px;
+    max-width: 15%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -50,10 +50,23 @@
 
 .capibara{
     display: flex;
-    margin-top: 50%;
+    margin-top: 15%;
     width: 100%;
     align-items: center;
     justify-content: center;
+    animation: 3s ease-in-out infinite levitate;
+}
+
+@keyframes levitate {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translatey(-100px);
+    }
 }
 
 .capibaraIMG{
@@ -73,7 +86,7 @@
 }
 
 .capybara-particle{
-    width: 30px;
+    width: calc(1rem + 4vh);
     position: absolute;
     top: -30px;
     left: -30px;
@@ -84,7 +97,7 @@
 .container_capibarinhas{
     width: 41%;
     height: 100%;
-    background: url("../assets/images/BackgroundPowers.jpg") left top;
+    background: url("../assets/images/BackgroundContainers.jpg") left top;
 }
 
 .capibarinhas{
@@ -96,36 +109,37 @@
 
 .capibarinhas_minion{
     margin-top: 2.3%;
-    background-color: white;
     width: 100%;
     height: 10.3%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-foto1{
+foto{
     display:flex;
+    width: 9%;
 }
 
 .minions{
-    /* width:50%; */
-    padding: 10px;
+    width: 100%;
 }
+
 .container_powers{
     display: flex;
     width: 25%;
     height: 100%;
     flex-wrap: wrap;
-    background: url("../assets/images/BackgroundPowers.jpg") left top;
+    background: url("../assets/images/BackgroundContainers.jpg") left top;
 }
 
 .powers{
     width: 100%;
     height: 20%;
-    background: url("../assets/images/BackgroundPowers.jpg") no-repeat left top;
+    background: url("../assets/images/backgroundPower.jpg") no-repeat left top;
     display: block;
     padding-bottom: 1%;
+    border-radius: 15px;
 }
 
 .btnPower{
@@ -196,7 +210,7 @@ foto1{
     }
     to{
         opacity: 0;
-        top: 0;
+
     }
 }
 
@@ -247,41 +261,41 @@ foto1{
 }
 
 #minion1{
-    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerSpace.png") no-repeat center;
+    background-size:cover;
 }
 
 #minion2{
-    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
+    background-size:cover;
 }
 
 #minion3{
-    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
+    background-size:cover;
 }
 
 #minion4{
-    background: url("../assets/images/BiomeBannerJungle.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
+    background-size:cover;
 }
 
 #minion5{
     background: url("../assets/images/BiomeBannerOasis.png") no-repeat center;
-    background-size:contain;
+    background-size:cover;
 }
 
 #minion6{
     background: url("../assets/images/BiomeBannerGraveyard.png") no-repeat center;
-    background-size:contain;
+    background-size:cover;
 }
 
 #minion7{
     background: url("../assets/images/BiomeBannerHallow.png") no-repeat center;
-    background-size:contain;
+    background-size:cover;
 }
 
 #minion8{
     background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
-    background-size:contain;
+    background-size:cover;
 }
