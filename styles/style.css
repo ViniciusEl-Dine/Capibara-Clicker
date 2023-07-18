@@ -74,6 +74,7 @@
     width: 60%;
     height: 60%;
     cursor: grab;
+    cursor: pointer;
 }
 
 .capybaraIMG:active{
@@ -149,6 +150,7 @@ foto{
     margin-left: 6%;
     width: 25%;
     height: 25%;
+    cursor: pointer;
 }
 
 .score_incrementation_buttons{
@@ -174,8 +176,9 @@ foto{
     letter-spacing: 2px;
     width: 100%;
     height: 7%;
-    border-radius: 50px;
-    background: linear-gradient(red,yellow, green);
+    border-radius: 40px;
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    cursor: pointer;
 }
 
 @media (max-width: 1150px){
@@ -214,7 +217,7 @@ foto{
 .btnUpgrade:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
-    color: white;
+    color: white
 }
 
 #upgrade1{
@@ -224,7 +227,8 @@ foto{
 }
 
 #upgrade1:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
 #upgrade2{
@@ -234,7 +238,8 @@ foto{
 }
 
 #upgrade2:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
 #upgrade8{
@@ -244,7 +249,8 @@ foto{
 }
 
 #upgrade8:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
 #upgrade9{

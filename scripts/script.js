@@ -33,9 +33,8 @@ let inicializado = false;
 capybara.onclick = function() {
     pontuacao += pontosAoClicar;
     score.innerHTML = pontuacao;
-    if(!inicializado) {
-        atualizarBotoesMelhoria();
-    }
+    if(!inicializado || pontuacao >= 100) {
+        atualizarBotoesMelhoria()}
     inicializado = true;
 }
 
