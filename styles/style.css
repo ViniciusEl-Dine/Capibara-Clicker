@@ -139,7 +139,7 @@ foto{
     //background: rgb(0,255,241);
     //backgrou''nd: radial-gradient(circle, rgba(0,255,241,1) 0%, rgba(10,85,165,1) 51%, rgba(255,255,255,1) 100%);    display: block;
     padding-bottom: 1%;
-    border: 2px solid #0296b8;
+    border: 3px solid white;
     background: rgb(255,244,0);
     background: radial-gradient(circle, rgba(255,244,0,1) 19%, rgba(255,137,0,1) 32%, rgba(255,0,0,1) 35%, rgba(0,0,0,1) 40%);
 }
