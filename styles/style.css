@@ -5,7 +5,6 @@
 
 .fundo{
     display: flex;
-    background-size: contain;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,11 +12,12 @@
     height: 100vh;
 }
 
-.container_capibara{
+.container_capybara{
     background: url("../assets/images/BackgroundMain.png") no-repeat left top;
     width: 34%;
     height: 100%;
     background-color: transparent;
+    background-size: cover;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -27,17 +27,18 @@
     display: block;
     width: 100%;
     height: 15%;
-    padding-left: 25%;
+    padding-left: 10%;
+    color: white;
+    font-family: "Audiowide", sans-serif;
 }
 
 .score{
     font-size: calc(1em + 2vw);
-    font-weight: bold
 }
 
 .pontos{
     position:absolute;
-    max-width: 246px;
+    max-width: 15%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -47,43 +48,57 @@
     font-size: calc(1em + 1vh);
 }
 
-.capibara{
+.capybara{
     display: flex;
-    margin-top: 50%;
+    margin-top: 15%;
     width: 100%;
     align-items: center;
     justify-content: center;
+    animation: 3s ease-in-out infinite levitate;
 }
 
-.capibaraIMG{
+@keyframes levitate {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translatey(-100px);
+    }
+}
+
+.capybaraIMG{
     display: flex;
     width: 60%;
     height: 60%;
     cursor: grab;
+    cursor: pointer;
 }
 
-.capibaraIMG:active{
-    -webkit-transform:scale(1.1);
+.capybaraIMG:active{
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
-.capibaraIMG::selection{
+.capybaraIMG::selection{
     opacity: 0;
 }
 
 .capybara-particle{
-    width: 30px;
+    width: calc(1rem + 4vh);
     position: absolute;
     top: -30px;
     left: -30px;
     pointer-events: none;
-    animation: capibara-up 3s linear forwards;
+    animation: capybara-up 3s linear forwards;
 }
 
 .container_capibarinhas{
     width: 41%;
     height: 100%;
-    background: url("../assets/images/BackgroundPowers.jpg") left top;
+    background: url("../assets/images/BackgroundContainers.jpg") left top;
 }
 
 .capibarinhas{
@@ -95,43 +110,57 @@
 
 .capibarinhas_minion{
     margin-top: 2.3%;
-    justify-content: space-around;
-    background-color: white;
     width: 100%;
     height: 10.3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.container_powers{
+foto{
+    display: flex;
+    width: 9%;
+}
+
+.minions{
+    width: 100%;
+}
+
+.container_upgrades_buttons{
     display: flex;
     width: 25%;
     height: 100%;
     flex-wrap: wrap;
-    background: url("../assets/images/BackgroundPowers.jpg") left top;
+    background: url("../assets/images/BackgroundContainers.jpg") left top;
 }
 
-.powers{
+.upgrades{
     width: 100%;
     height: 20%;
-    background: url("../assets/images/BackgroundPowers.jpg") no-repeat left top;
-    display: block;
+    /*background: url("../assets/images/BackgroundUpgrades.jpg") no-repeat left top;
+    display: block;*/
     padding-bottom: 1%;
+    border: 3px solid white;
+    background: rgb(255,244,0);
+    background: radial-gradient(circle, rgba(255,244,0,1) 19%, rgba(255,137,0,1) 32%, rgba(255,0,0,1) 35%, rgba(0,0,0,1) 40%);
 }
 
-.btnPower{
+.btnUpgrade{
     margin-top: 2%;
     margin-left: 6%;
     width: 25%;
     height: 25%;
+    cursor: pointer;
 }
 
-.upgrade_powers{
+.score_incrementation_buttons{
     margin-top: 0%;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.btnUpgrade{
+.btnScoreIncrementation{
     margin-top: 5%;
     justify-content: space-around;
     width: 100%;
@@ -140,137 +169,141 @@
     filter: blur(20px);
 }
 
-.buttonUpgradeOn{
+.btnScoreIncrementationOn{
     margin-top: 5%;
     justify-content: space-around;
     font-size: calc(1em + 1vw);
     letter-spacing: 2px;
     width: 100%;
     height: 7%;
-    border-radius: 50px;
-    background: linear-gradient(red,yellow, green);
+    border-radius: 40px;
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    cursor: pointer;
 }
 
-@media (max-width: 1150px)
-{
-    .capibara{
+@media (max-width: 1150px){
+    .capybara{
         margin-top: 40%
     }
 }
 
-@media (max-width: 1000px)
-{
-    .capibara{
+@media (max-width: 1000px){
+    .capybara{
         margin-top: 50%
     }
 }
 
-@media (max-width: 900px)
-{
+@media (max-width: 900px){
     .table_score{
         padding-left: 5%;
     }
-
     .pontos{
         max-width: 15%;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow:ellipsis ;
+        text-overflow: ellipsis;
     }
 }
 
-@keyframes capibara-up {
+@keyframes capybara-up {
     from {
         opacity: 1;
     }
-    to{
+    to {
         opacity: 0;
-        top: 0;
     }
 }
 
-.btnPower:disabled{
+.btnUpgrade:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
-    color: white;
+    color: white
 }
 
-#power1{
+#upgrade1{
     background: url("../assets/images/IconDoubleClick.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power1:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+#upgrade1:disabled{
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
-#power2{
+#upgrade2{
     background: url("../assets/images/IconGrass.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power2:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+#upgrade2:disabled{
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
-#power8{
+#upgrade8{
     background: url("../assets/images/IconDiscount.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power8:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+#upgrade8:disabled{
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
-#power9{
+#upgrade9{
     background: url("../assets/images/IconBlackCapybara.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power9:disabled{
+#upgrade9:disabled{
     background: linear-gradient(red,yellow, green, blue, black, white, orange);
 }
 
 #minion1{
-    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerSpace.png") no-repeat center;
+    background-size: cover;
 }
 
 #minion2{
-    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
+    background-size: cover;
 }
 
 #minion3{
-    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
+    background-size: cover;
 }
 
 #minion4{
-    background: url("../assets/images/BiomeBannerJungle.png") no-repeat center;
-    background-size:contain;
+    background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
+    background-size: cover;
 }
 
 #minion5{
     background: url("../assets/images/BiomeBannerOasis.png") no-repeat center;
-    background-size:contain;
+    background-size: cover;
 }
 
 #minion6{
     background: url("../assets/images/BiomeBannerGraveyard.png") no-repeat center;
-    background-size:contain;
+    background-size: cover;
 }
 
 #minion7{
     background: url("../assets/images/BiomeBannerHallow.png") no-repeat center;
-    background-size:contain;
+    background-size: cover;
 }
 
 #minion8{
     background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
-    background-size:contain;
+    background-size: cover;
 }
+
+
+
+
+
