@@ -54,7 +54,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    animation: 3s ease-in-out infinite levitate;
+    background: url(../assets/images/planetaTerra.png) no-repeat center;
 }
 
 @keyframes levitate {
@@ -75,6 +75,7 @@
     height: 60%;
     cursor: grab;
     cursor: pointer;
+    animation: 3s ease-in-out infinite levitate;
 }
 
 .capybaraIMG:active{
@@ -139,8 +140,7 @@ foto{
     height: 20%;
     padding-bottom: 1%;
     border: 3px solid white;
-    background: rgb(255,244,0);
-    background: radial-gradient(circle, rgba(255,244,0,1) 19%, rgba(255,137,0,1) 32%, rgba(255,0,0,1) 35%, rgba(0,0,0,1) 40%);
+    background-color: black;
 }
 
 .btnUpgrade{
@@ -209,6 +209,7 @@ foto{
     }
     to {
         opacity: 0;
+        top: 0;
     }
 }
 
@@ -300,8 +301,4 @@ foto{
     background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
     background-size: cover;
 }
-
-
-
-
 
