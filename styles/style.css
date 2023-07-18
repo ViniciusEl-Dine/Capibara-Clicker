@@ -77,7 +77,7 @@
 }
 
 .capybaraIMG:active{
-    -webkit-transform:scale(1.1);
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -117,7 +117,7 @@
 }
 
 foto{
-    display:flex;
+    display: flex;
     width: 9%;
 }
 
@@ -178,31 +178,27 @@ foto{
     background: linear-gradient(red,yellow, green);
 }
 
-@media (max-width: 1150px)
-{
+@media (max-width: 1150px){
     .capybara{
         margin-top: 40%
     }
 }
 
-@media (max-width: 1000px)
-{
+@media (max-width: 1000px){
     .capybara{
         margin-top: 50%
     }
 }
 
-@media (max-width: 900px)
-{
+@media (max-width: 900px){
     .table_score{
         padding-left: 5%;
     }
-
     .pontos{
         max-width: 15%;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow:ellipsis ;
+        text-overflow: ellipsis;
     }
 }
 
@@ -210,9 +206,8 @@ foto{
     from {
         opacity: 1;
     }
-    to{
+    to {
         opacity: 0;
-
     }
 }
 
@@ -264,40 +259,45 @@ foto{
 
 #minion1{
     background: url("../assets/images/BiomeBannerSpace.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion2{
     background: url("../assets/images/BiomeBannerForest.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion3{
     background: url("../assets/images/BiomeBannerSnow.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion4{
     background: url("../assets/images/BiomeBannerDesert.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion5{
     background: url("../assets/images/BiomeBannerOasis.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion6{
     background: url("../assets/images/BiomeBannerGraveyard.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion7{
     background: url("../assets/images/BiomeBannerHallow.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 
 #minion8{
     background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
+
+
+
+
+
