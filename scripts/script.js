@@ -1,6 +1,6 @@
-const capybara = document.querySelector(".capibaraIMG");
-const btnScoreIncrementation = document.querySelectorAll('.btnUpgrade'); //Anteriormente declarada como "btnUpgrades"
-const btnUpgrades = document.querySelectorAll('.btnPower'); //Anteriormente declarada como "btnPowers"
+const capybara = document.querySelector(".capybaraIMG");
+const btnScoreIncrementation = document.querySelectorAll('.btnScoreIncrementation'); //Anteriormente declarada como "btnUpgrades"
+const btnUpgrades = document.querySelectorAll('.btnUpgrade'); //Anteriormente declarada como "btnPowers"
 var priceUpgrades = [100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000];
 const limitaFotos = [0,0,0,0,0,0,0,0];
 const divs = document.querySelectorAll('.capibarinhas_minion');
@@ -12,15 +12,15 @@ var pontosAoClicar = 1
 
 /* --> Cria particulas de clique */
 const createParticle = (x,y) =>{
-    const capibaraCLicks = document.querySelector(".capibara");
+    const capybaraCLicks = document.querySelector(".capybara");
     const particle = document.createElement("img");
     particle.setAttribute("src","../assets/images/IconHeart.png");
     particle.setAttribute("class","capybara-particle");
     particle.style.left = x + "px";
     particle.style.top = (y/2) + "px";
-    capibaraCLicks.appendChild(particle);
+    capybaraCLicks.appendChild(particle);
     setTimeout(() => {
-        capibaraCLicks.removeChild(particle);
+        capybaraCLicks.removeChild(particle);
     }, 1000);
 };
 
@@ -32,7 +32,7 @@ capybara.addEventListener("click", (e) =>{
 capybara.onclick = function() {
     pontuacao += pontosAoClicar;
     score.innerHTML = pontuacao;
-    mostrarBotoesMelhoria();
+    atualizarBotoesMelhoria();
 }
 
 /* --> Botões de melhorias */
@@ -82,7 +82,8 @@ function manipularPontos(index, precoUpgrade, valorSoma, valorSomaPontos) {
         if(pontosPorSegundo == 0 && precoUpgrade == 100) {
             setInterval(() => {
             pontuacao += pontosPorSegundo,
-            score.innerHTML = pontuacao}, 1000)
+            score.innerHTML = pontuacao,
+            atualizarBotoesMelhoria()}, 1000);
         }
         pontuacao -= precoUpgrade;
         score.innerHTML = pontuacao;
@@ -100,7 +101,7 @@ function manipularPontos(index, precoUpgrade, valorSoma, valorSomaPontos) {
 function adicionaImagem(div, limitaFotos) {
     if(limitaFotos < 10) {
         const foto = document.createElement("foto");
-        foto.innerHTML = `<img src="../assets/images/minion01.png" class="minions"/>`;
+        foto.innerHTML = `<img src="../assets/images/CapybaraMinion.png" class="minions"/>`;
         div.appendChild(foto);
         limitaFotos++;
     }
@@ -110,38 +111,38 @@ function atualizarHTML() {
     ps.innerHTML = `Pontos por segundo: ${pontosPorSegundo}`;
 }
 
-function mostrarBotoesMelhoria() {
+function atualizarBotoesMelhoria() {
     if(pontuacao >= 100) {
         btnScoreIncrementation[0].textContent = priceUpgrades[0];
-        btnScoreIncrementation[0].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[0].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 1000) {
         btnScoreIncrementation[1].textContent = priceUpgrades[1];
-        btnScoreIncrementation[1].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[1].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 10000) {
         btnScoreIncrementation[2].textContent = priceUpgrades[2];
-        btnScoreIncrementation[2].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[2].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 100000) {
         btnScoreIncrementation[3].textContent = priceUpgrades[3];
-        btnScoreIncrementation[3].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[3].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 1000000) {
         btnScoreIncrementation[4].textContent = priceUpgrades[4];
-        btnScoreIncrementation[4].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[4].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 10000000) {
         btnScoreIncrementation[5].textContent = priceUpgrades[5];
-        btnScoreIncrementation[5].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[5].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 100000000) {
         btnScoreIncrementation[6].textContent = priceUpgrades[6];
-        btnScoreIncrementation[6].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[6].setAttribute('class', 'btnScoreIncrementationOn');
     }
     if(pontuacao >= 1000000000) {
         btnScoreIncrementation[7].textContent = priceUpgrades[7];
-        btnScoreIncrementation[7].setAttribute('class', 'buttonUpgradeOn');
+        btnScoreIncrementation[7].setAttribute('class', 'btnScoreIncrementationOn');
     }
 }
 

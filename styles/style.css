@@ -12,8 +12,8 @@
     height: 100vh;
 }
 
-.container_capibara{
-    background: url("../assets/images/planoFundo.png") no-repeat left top;
+.container_capybara{
+    background: url("../assets/images/BackgroundMain.png") no-repeat left top;
     width: 34%;
     height: 100%;
     background-color: transparent;
@@ -48,7 +48,7 @@
     font-size: calc(1em + 1vh);
 }
 
-.capibara{
+.capybara{
     display: flex;
     margin-top: 15%;
     width: 100%;
@@ -69,19 +69,19 @@
     }
 }
 
-.capibaraIMG{
+.capybaraIMG{
     display: flex;
     width: 60%;
     height: 60%;
     cursor: grab;
 }
 
-.capibaraIMG:active{
+.capybaraIMG:active{
     -webkit-transform:scale(1.1);
     transform: scale(1.1);
 }
 
-.capibaraIMG::selection{
+.capybaraIMG::selection{
     opacity: 0;
 }
 
@@ -91,7 +91,7 @@
     top: -30px;
     left: -30px;
     pointer-events: none;
-    animation: capibara-up 3s linear forwards;
+    animation: capybara-up 3s linear forwards;
 }
 
 .container_capibarinhas{
@@ -125,7 +125,7 @@ foto{
     width: 100%;
 }
 
-.container_powers{
+.container_upgrades_buttons{
     display: flex;
     width: 25%;
     height: 100%;
@@ -133,30 +133,30 @@ foto{
     background: url("../assets/images/BackgroundContainers.jpg") left top;
 }
 
-.powers{
+.upgrades{
     width: 100%;
     height: 20%;
-    background: url("../assets/images/backgroundPower.jpg") no-repeat left top;
+    background: url("../assets/images/BackgroundUpgrades.jpg") no-repeat left top;
     display: block;
     padding-bottom: 1%;
     border-radius: 15px;
 }
 
-.btnPower{
+.btnUpgrade{
     margin-top: 2%;
     margin-left: 6%;
     width: 25%;
     height: 25%;
 }
 
-.upgrade_powers{
+.score_incrementation_buttons{
     margin-top: 0%;
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.btnUpgrade{
+.btnScoreIncrementation{
     margin-top: 5%;
     justify-content: space-around;
     width: 100%;
@@ -165,7 +165,7 @@ foto{
     filter: blur(20px);
 }
 
-.buttonUpgradeOn{
+.btnScoreIncrementationOn{
     margin-top: 5%;
     justify-content: space-around;
     font-size: calc(1em + 1vw);
@@ -178,14 +178,14 @@ foto{
 
 @media (max-width: 1150px)
 {
-    .capibara{
+    .capybara{
         margin-top: 40%
     }
 }
 
 @media (max-width: 1000px)
 {
-    .capibara{
+    .capybara{
         margin-top: 50%
     }
 }
@@ -204,7 +204,7 @@ foto{
     }
 }
 
-@keyframes capibara-up {
+@keyframes capybara-up {
     from {
         opacity: 1;
     }
@@ -214,49 +214,49 @@ foto{
     }
 }
 
-.btnPower:disabled{
+.btnUpgrade:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
     color: white;
 }
 
-#power1{
+#upgrade1{
     background: url("../assets/images/IconDoubleClick.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power1:disabled{
+#upgrade1:disabled{
     background: linear-gradient(red,yellow, green, blue, black, white, orange);
 }
 
-#power2{
+#upgrade2{
     background: url("../assets/images/IconGrass.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power2:disabled{
+#upgrade2:disabled{
     background: linear-gradient(red,yellow, green, blue, black, white, orange);
 }
 
-#power8{
+#upgrade8{
     background: url("../assets/images/IconDiscount.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power8:disabled{
+#upgrade8:disabled{
     background: linear-gradient(red,yellow, green, blue, black, white, orange);
 }
 
-#power9{
+#upgrade9{
     background: url("../assets/images/IconBlackCapybara.png") no-repeat center;
     background-size: contain;
     background-color: white;
 }
 
-#power9:disabled{
+#upgrade9:disabled{
     background: linear-gradient(red,yellow, green, blue, black, white, orange);
 }
 
