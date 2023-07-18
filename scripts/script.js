@@ -17,7 +17,7 @@ const createParticle = (x,y) =>{
     particle.setAttribute("src","../assets/images/IconHeart.png");
     particle.setAttribute("class","capybara-particle");
     particle.style.left = x + "px";
-    particle.style.top = (y/2) + "px";
+    particle.style.top = y + "px";
     capybaraCLicks.appendChild(particle);
     setTimeout(() => {
         capybaraCLicks.removeChild(particle);
