@@ -55,6 +55,7 @@
     align-items: center;
     justify-content: center;
     background: url(../assets/images/planetaTerra.png) no-repeat center;
+    background-size: contain;
 }
 
 @keyframes levitate {
@@ -216,13 +217,16 @@ foto{
 .btnUpgrade:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
-    color: white
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #upgrade1{
     background: url("../assets/images/IconDoubleClick.png") no-repeat center;
     background-size: contain;
-    background-color: white;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade1:disabled{
@@ -233,7 +237,7 @@ foto{
 #upgrade2{
     background: url("../assets/images/IconGrass.png") no-repeat center;
     background-size: contain;
-    background-color: white;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade2:disabled{
@@ -244,7 +248,7 @@ foto{
 #upgrade8{
     background: url("../assets/images/IconDiscount.png") no-repeat center;
     background-size: contain;
-    background-color: white;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade8:disabled{
@@ -255,7 +259,7 @@ foto{
 #upgrade9{
     background: url("../assets/images/IconBlackCapybara.png") no-repeat center;
     background-size: contain;
-    background-color: white;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade9:disabled{
