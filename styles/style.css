@@ -54,7 +54,8 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    animation: 3s ease-in-out infinite levitate;
+    background: url(../assets/images/planetaTerra.png) no-repeat center;
+    background-size: contain;
 }
 
 @keyframes levitate {
@@ -75,11 +76,7 @@
     height: 60%;
     cursor: grab;
     cursor: pointer;
-}
-
-.capybaraIMG:active{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    animation: 3s ease-in-out infinite levitate;
 }
 
 .capybaraIMG::selection{
@@ -87,7 +84,7 @@
 }
 
 .capybara-particle{
-    width: calc(1rem + 4vh);
+    width: calc(1rem + 3vh);
     position: absolute;
     top: -30px;
     left: -30px;
@@ -136,21 +133,22 @@ foto{
 
 .upgrades{
     width: 100%;
-    height: 20%;
-    /*background: url("../assets/images/BackgroundUpgrades.jpg") no-repeat left top;
-    display: block;*/
+    height: 19%;
     padding-bottom: 1%;
     border: 3px solid white;
-    background: rgb(255,244,0);
-    background: radial-gradient(circle, rgba(255,244,0,1) 19%, rgba(255,137,0,1) 32%, rgba(255,0,0,1) 35%, rgba(0,0,0,1) 40%);
+    background-color: black;
 }
 
 .btnUpgrade{
     margin-top: 2%;
     margin-left: 6%;
     width: 25%;
-    height: 25%;
+    height: 20%;
     cursor: pointer;
+    border-radius: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .score_incrementation_buttons{
@@ -179,6 +177,28 @@ foto{
     border-radius: 40px;
     background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
     cursor: pointer;
+}
+
+.light_color{
+    margin-top: 3%;
+    margin-left: 2%;
+    height: 11%;
+    width: 5.2%;
+    border-radius: 50%;
+    display: inline-block;
+    animation: color-transition 10s linear infinite;
+}
+
+@keyframes color-transition {
+    0%{
+        background-color: rgb(0, 255, 0);
+    }
+    50%{
+        background-color: rgb(255, 238, 0);
+    }
+    100%{
+        background-color: rgb(255, 0, 0);
+    }
 }
 
 @media (max-width: 1150px){
@@ -211,56 +231,67 @@ foto{
     }
     to {
         opacity: 0;
+        top: 0;
     }
 }
 
 .btnUpgrade:disabled{
     font-size: calc(1em + 0.1vw);
     font-weight: bold;
-    color: white
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#upgrade1:hover,
+#upgrade2:hover,
+#upgrade3:hover,
+#upgrade4:hover,
+#upgrade5:hover,
+#upgrade6:hover,
+#upgrade7:hover,
+#upgrade8:hover,
+#upgrade9:hover
+{
+    background-color: rgb(0, 255, 0);
+}
+
+#upgrade1:disabled,
+#upgrade2:disabled,
+#upgrade3:disabled,
+#upgrade4:disabled,
+#upgrade5:disabled,
+#upgrade6:disabled,
+#upgrade7:disabled,
+#upgrade8:disabled,
+#upgrade9:disabled{
+    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
+    pointer-events: none;
 }
 
 #upgrade1{
     background: url("../assets/images/IconDoubleClick.png") no-repeat center;
     background-size: contain;
-    background-color: white;
-}
-
-#upgrade1:disabled{
-    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
-    pointer-events: none;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade2{
     background: url("../assets/images/IconGrass.png") no-repeat center;
     background-size: contain;
-    background-color: white;
-}
-
-#upgrade2:disabled{
-    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
-    pointer-events: none;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade8{
     background: url("../assets/images/IconDiscount.png") no-repeat center;
     background-size: contain;
-    background-color: white;
-}
-
-#upgrade8:disabled{
-    background: linear-gradient(89.8deg, rgb(195, 67, 129) 11%, rgb(90, 43, 186) 83.4%);
-    pointer-events: none;
+    background-color: rgb(3, 68, 3);
 }
 
 #upgrade9{
     background: url("../assets/images/IconBlackCapybara.png") no-repeat center;
     background-size: contain;
-    background-color: white;
-}
-
-#upgrade9:disabled{
-    background: linear-gradient(red,yellow, green, blue, black, white, orange);
+    background-color: rgb(3, 68, 3);
 }
 
 #minion1{
@@ -302,8 +333,5 @@ foto{
     background: url("../assets/images/BiomeBannerCorruption.png") no-repeat center;
     background-size: cover;
 }
-
-
-
 
 
