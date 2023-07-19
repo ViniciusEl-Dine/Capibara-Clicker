@@ -1,3 +1,8 @@
+import imagens from './imagens.json' assert {type: 'json'};
+
+
+console.log(imagens.length);
+
 const capybara = document.querySelector(".capybaraIMG");
 const btnScoreIncrementation = document.querySelectorAll('.btnScoreIncrementation');
 const btnUpgrades = document.querySelectorAll('.btnUpgrade');
@@ -10,7 +15,7 @@ var novoArray = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];*/
 const limitaFotos = [0,0,0,0,0,0,0,0];
 var pontuacao = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1000000;
+var pontosAoClicar = 100000000000000;
 
 /* --> Cria particulas de clique */
 const criarParticulasDeClique = (x, y) => {
@@ -96,14 +101,14 @@ function atualizarPontuacao(index, priceUpgrade, valorSoma, valorSomaPontos) {
         if (limitaFotos[index] < 10){
             limitaFotos[index]++;
         }
-        adicionaImagem(divs[index], limitaFotos[index])
+        adicionaImagem(divs[index], limitaFotos[index], index)
     }
 }
 
-function adicionaImagem(div, limitaFotos) {
+function adicionaImagem(div, limitaFotos, algumaCoisa) {
     if(limitaFotos < 10) {
         const foto = document.createElement("foto");
-        foto.innerHTML = `<img src="../assets/images/CapybaraMinion.png" class="minions"/>`;
+        foto.innerHTML = `<img src="${imagens[algumaCoisa].img}" class="minions"/>`;
         div.appendChild(foto);
         limitaFotos++;
     }
