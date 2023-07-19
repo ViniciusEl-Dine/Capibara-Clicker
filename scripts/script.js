@@ -1,39 +1,36 @@
 const capybara = document.querySelector(".capybaraIMG");
-const btnScoreIncrementation = document.querySelectorAll('.btnScoreIncrementation'); //Anteriormente declarada como "btnUpgrades"
-const btnUpgrades = document.querySelectorAll('.btnUpgrade'); //Anteriormente declarada como "btnPowers"
+const btnScoreIncrementation = document.querySelectorAll('.btnScoreIncrementation');
+const btnUpgrades = document.querySelectorAll('.btnUpgrade');
 const divs = document.querySelectorAll('.capibarinhas_minion');
 const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
 var priceUpgrades = [100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000];
 const limitaFotos = [0,0,0,0,0,0,0,0];
-var pontuacao = 0; //Anteriormente declarada como "pontos"
+var pontuacao = 0;
 var pontosPorSegundo = 0;
 var pontosAoClicar = 1
 
 /* --> Cria particulas de clique */
-const createParticle = (x,y) =>{
+const criarParticulasDeClique = (x, y) => {
     const capybaraCLicks = document.querySelector(".capybara");
-    const particle = document.createElement("img");
-    particle.setAttribute("src","../assets/images/IconHeart.png");
-    particle.setAttribute("class","capybara-particle");
-    particle.style.left = x + "px";
-    particle.style.top = y + "px";
-    capybaraCLicks.appendChild(particle);
+    const particula = document.createElement("img");
+    particula.setAttribute("src","../assets/images/IconHeart.png");
+    particula.setAttribute("class","capybara-particle");
+    particula.style.left = x + "px";
+    particula.style.top = y + "px";
+    capybaraCLicks.appendChild(particula);
     setTimeout(() => {
-        capybaraCLicks.removeChild(particle);
+        capybaraCLicks.removeChild(particula);
     }, 1000);
 };
 
-capybara.addEventListener("click", (e) =>{
-    createParticle(e.clientX, e.clientY)
-});
-
 /* --> Função de clique inicial */
 let inicializado = false;
-capybara.onclick = function() {
+capybara.onclick = function(event) {
+    criarParticulasDeClique(event.clientX, event.clientY);
     pontuacao += pontosAoClicar;
     score.innerHTML = pontuacao;
-    if(!inicializado || pontuacao >= 100) {
+    if(!inicializado || pontuacao == 100) {
         atualizarBotoesMelhoria()}
     inicializado = true;
 }
@@ -79,7 +76,7 @@ btnScoreIncrementation[7].onclick = function() {
     atualizarHTML(pontosPorSegundo);
 }
 
-//Atualiza os pontos com base no index passado como parâmetro ao clicar nos botões de incrementação
+/* --> Atualiza os pontos com base no index passado como parâmetro ao clicar nos botões de incrementação */
 function atualizarPontuacao(index, priceUpgrade, valorSoma, valorSomaPontos) {  
     if(pontuacao >= priceUpgrade){
         if(pontosPorSegundo == 0 && priceUpgrade == 100) {
@@ -92,7 +89,7 @@ function atualizarPontuacao(index, priceUpgrade, valorSoma, valorSomaPontos) {
         score.innerHTML = pontuacao;
         priceUpgrade += valorSoma;
         priceUpgrades[index] = priceUpgrade;
-        btnScoreIncrementation[index].textContent = priceUpgrade; //Atualiza o texto com base no ponteiro e no preço da melhoria
+        btnScoreIncrementation[index].textContent = priceUpgrade;
         pontosPorSegundo += valorSomaPontos;
         if (limitaFotos[index] < 10){
             limitaFotos[index]++;
@@ -114,7 +111,7 @@ function atualizarHTML() {
     ps.innerHTML = `Pontos por segundo: ${pontosPorSegundo}`;
 }
 
-function atualizarBotoesMelhoria() { //AVISO: Função refatorada. Verificar desempenho e/ou surgimento de bugs
+function atualizarBotoesMelhoria() {
     for(let i = 0; i <= btnScoreIncrementation.length; i++) {
         if(pontuacao >= priceUpgrades[i]) {
             btnScoreIncrementation[i].textContent = priceUpgrades[i];
@@ -133,7 +130,7 @@ btnUpgrades[0].onclick = function() {
 }
 
 btnUpgrades[1].onclick = function() {
-    let priceUpgradeTemp = 1; //Anteriormente declarada como "precoPower2"
+    let priceUpgradeTemp = 1;
     if(pontuacao >= priceUpgradeTemp && pontosAoClicar < 10){
         pontuacao -= priceUpgradeTemp;
         btnUpgrades[1] += 1;
