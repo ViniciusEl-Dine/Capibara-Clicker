@@ -33,19 +33,19 @@
 }
 
 .score{
-    font-size: calc(1em + 2vw);
+    font-size: calc(1em + 1vw);
 }
 
 .pontos{
     position:absolute;
-    max-width: 15%;
+    max-width: 13%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .ps{
-    font-size: calc(1em + 1vh);
+    font-size: calc(1em + 0.5vh);
 }
 
 .capybara{

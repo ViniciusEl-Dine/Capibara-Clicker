@@ -10,7 +10,7 @@ var novoArray = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];*/
 const limitaFotos = [0,0,0,0,0,0,0,0];
 var pontuacao = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1
+var pontosAoClicar = 1000000;
 
 /* --> Cria particulas de clique */
 const criarParticulasDeClique = (x, y) => {
@@ -81,7 +81,7 @@ btnScoreIncrementation[7].onclick = function() {
 /* --> Atualiza os pontos com base no index passado como parâmetro ao clicar nos botões de incrementação */
 function atualizarPontuacao(index, priceUpgrade, valorSoma, valorSomaPontos) {  
     if(pontuacao >= priceUpgrade){
-        if(pontosPorSegundo == 0 && priceUpgrade == 100) {
+        if(pontosPorSegundo == 0) {
             setInterval(() => {
             pontuacao += pontosPorSegundo,
             score.innerHTML = pontuacao,
