@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -29,11 +31,11 @@
     height: 15%;
     padding-left: 10%;
     color: white;
-    font-family: "Audiowide", sans-serif;
+    font-family: 'Play', sans-serif;
 }
 
 .score{
-    font-size: calc(1em + 1vw);
+    font-size: calc(1em + 1.5vw);
 }
 
 .pontos{
