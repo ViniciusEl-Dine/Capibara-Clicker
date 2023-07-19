@@ -46,6 +46,10 @@
     text-overflow: ellipsis;
 }
 
+button{
+    border-color: white;
+}
+
 .ps{
     font-size: calc(1em + 0.5vh);
 }
