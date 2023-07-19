@@ -32,7 +32,7 @@ capybara.onclick = function(event) {
     criarParticulasDeClique(event.clientX, event.clientY);
     pontuacao += pontosAoClicar;
     score.innerHTML = pontuacao;
-    if(!inicializado || pontuacao == 100) {
+    if(!inicializado || pontuacao <= 150) {
         atualizarBotoesMelhoria()}
     inicializado = true;
 }
