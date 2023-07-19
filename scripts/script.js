@@ -5,6 +5,8 @@ const divs = document.querySelectorAll('.capibarinhas_minion');
 const ps = document.querySelector(".ps")
 var score = document.querySelector(".pontos")
 var priceUpgrades = [100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000];
+/*var newPrice = [1, 5, 50, 500, 5000, 50000, 500000, 5000000, 50000000];
+var novoArray = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];*/
 const limitaFotos = [0,0,0,0,0,0,0,0];
 var pontuacao = 0;
 var pontosPorSegundo = 0;
@@ -143,7 +145,7 @@ btnUpgrades[1].onclick = function() {
     }
 }
 
-btnUpgrades[7].onclick = function() {
+btnUpgrades[2].onclick = function() {
     if(pontuacao >= 5000){
         btnUpgrades[7].setAttribute('disabled', '');
         pontuacao -= 5000;
@@ -155,7 +157,7 @@ btnUpgrades[7].onclick = function() {
         for(let i = 0; i <= 7; i++) {
             desconto(i);
         }
-        btnUpgrades[7].setAttribute('disabled', '');
-        btnUpgrades[7].textContent=('Comprado')
+        btnUpgrades[2].setAttribute('disabled', '');
+        btnUpgrades[2].textContent=('Comprado')
     }
 }
