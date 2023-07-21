@@ -1,4 +1,4 @@
-[
+export default [
     {
         "id":1,
         "img":"../assets/images/iconCapybaraHigh.png"
