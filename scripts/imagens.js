@@ -13,7 +13,7 @@ export default [
     },
     {
         "id": 4,
-        "img": "../assets/images/iconCapybaraOasis.png"
+        "img": "../assets/images/iconCapybaraDesert.png"
     },
     {
         "id": 5,

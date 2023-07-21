@@ -1,6 +1,5 @@
 import imagens from './imagens.js';
 
-
 console.log(imagens.length);
 
 const capybara = document.querySelector(".capybaraIMG");
@@ -15,7 +14,7 @@ var novoArray = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];*/
 const limitaFotos = [0, 0, 0, 0, 0, 0, 0, 0];
 var pontuacao = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 1000000
+var pontosAoClicar = 100000
 
 /* --> Cria particulas de clique */
 const criarParticulasDeClique = (x, y) => {
