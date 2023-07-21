@@ -1,4 +1,4 @@
-import imagens from './imagens.json' assert {type: 'json'};
+import imagens from './imagens.js';
 
 
 console.log(imagens.length);
@@ -12,10 +12,10 @@ var score = document.querySelector(".pontos")
 var priceUpgrades = [100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 1000000000];
 /*var newPrice = [1, 5, 50, 500, 5000, 50000, 500000, 5000000, 50000000];
 var novoArray = [1, 10, 100, 1000, 10000, 100000, 1000000, 10000000];*/
-const limitaFotos = [0,0,0,0,0,0,0,0];
+const limitaFotos = [0, 0, 0, 0, 0, 0, 0, 0];
 var pontuacao = 0;
 var pontosPorSegundo = 0;
-var pontosAoClicar = 100000000000000;
+var pontosAoClicar = 1000000
 
 /* --> Cria particulas de clique */
 const criarParticulasDeClique = (x, y) => {
