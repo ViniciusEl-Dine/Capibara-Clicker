@@ -140,7 +140,6 @@ btnUpgrades[1].onclick = function() {
     let priceUpgradeTemp = 1;
     if(pontuacao >= priceUpgradeTemp && pontosAoClicar < 10){
         pontuacao -= priceUpgradeTemp;
-        btnUpgrades[1] += 1;
         score.innerHTML = pontuacao;
         pontosAoClicar++
     }
